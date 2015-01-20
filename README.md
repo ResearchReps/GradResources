@@ -1,2 +1,2 @@
-# GradResources
-Resources for Graduate Students
+# Resources for Graduate Students
+
