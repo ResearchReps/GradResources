@@ -1,0 +1,355 @@
+\documentclass{beamer}
+
+\usepackage[orientation=portrait,size=a0,scale=1.1]{beamerposter}
+\usetheme{confposter}
+\usepackage{exscale} % Use after theme to display integrals properly
+\input{preamble}
+
+\newlength{\columnheight}
+\newlength{\onecolwid}
+\newlength{\twocolwid}
+\newlength{\threecolwid}
+\newlength{\halfcolwid}
+\setlength{\columnheight}{105cm}
+\setlength{\onecolwid}{0.3\paperwidth}
+\setlength{\twocolwid}{0.3\paperwidth}
+\setlength{\threecolwid}{0.3\paperwidth}
+\setlength{\halfcolwid}{0.12\paperwidth}
+
+\setbeamercolor{block title}{fg=jblue}
+%\setbeamercolor{block body}{fg=black,bg=white}
+%\setbeamercolor{block alerted title}{fg=white,bg=dblue!70}
+%\setbeamercolor{block alerted body}{fg=black,bg=dblue!10}
+
+\title{\LARGE Threshold Saturation for Spatially-Coupled LDPC and LDGM Codes on BMS Channels}
+\author{Santhosh Kumar$^{\dagger}$, Andrew J. Young$^{\ddagger}$, Nicolas Macris$^{\S}$, Henry D. Pfister$^{\dagger}$}
+\institute{Texas A\&M University$^{\dagger}$, Massachusetts Institute of Technology$^{\ddagger}$, \'{E}cole Polytechnique F\'{e}d\'{e}rale de Lausanne$^{\S}$}
+
+\begin{document}
+\begin{columns}[t]
+% First Column
+\begin{column}{\onecolwid}
+  
+% Introduction
+\begin{block}{\Large Introduction}
+  \begin{itemize}
+  \item In 1999, Felstrom and Zigangirov introduced LDPC convolutional codes
+  \item In 2005, LSZC showed that terminated regular LDPC convolutional codes have BP thresholds close to capacity
+  \item KRU recently showed that this is a general phenomenon by establishing that spatially-coupled regular LDPC codes universally achieve capacity over BMS channels
+  \item YJNP gave a simple proof of threshold saturation for coupled scalar recursions (e.g., irregular LDPC over BEC) based on potential functions
+  \item We extend the proof technique based on potential functions to BMS channels
+  \end{itemize}
+\end{block}
+
+% Spatially-coupled Ensemble
+\begin{block}{\Large Spatially-Coupled Ensemble}
+  \resizebox{26cm}{17cm}{
+    \input{./Figures/protograph_spatially_coupled_ldpc}
+  }
+  \begin{itemize}
+  \item The protograph of a $(3,6)$ SC LDPC ensemble
+  \item The gray nodes represent the perfect information at the boundary
+  \end{itemize}
+\end{block}
+
+% Main Theorems
+\begin{block}{\Large Main Result}
+  \begin{itemize}
+
+  \item Consider a SC irregular LDPC ensemble and ordered BMS channels $\msc(\h)$ with entropy $\h$ 
+    \begin{itemize}
+    \item If $\h < \hmap$, then for large $w$, SC Density Evolution (DE) converges to the perfect decoding solution
+    \item If $\h > \hmap$, then for fixed $w$, and large $N$, the SC DE does not converge to the perfect decoding solution
+    \end{itemize}
+    \vspace{0.5cm}
+  \item Consider a SC irregular LDGM ensemble and a BMS channel
+    \begin{itemize}
+    \item When the DE of LDGM ensembles is initialized with perfect information, it converges to a nontrivial \textcolor{blue}{minimal fixed point}
+    \item If the so-called \textcolor{blue}{energy gap} for the BMS channel is positive, then the SC DE converges to a fixed point which is elementwise better than minimal fixed point
+    \end{itemize}
+  \end{itemize}
+\end{block}
+
+% Preliminaries & Notation
+\begin{block}{\Large Preliminaries}
+  \begin{itemize}
+  \item Let $\probs$ denote the set of all \textcolor{blue}{symmetric} probability measures on $\extR$
+  \item Entropy functional is given by $\ent{\msx} \triangleq \int \left( 1+e^{-\alpha} \right) \msx(\diff{\alpha})$
+    \begin{itemize}
+    \item Equivalently
+      \begin{align*}
+        \ent{\msx} \!=\! 1 \!-\! \sum_{k=1}^{\infty} \gamma_k M_{k}(\msx) ,\, \text{where $M_{k}(\msx) \!\triangleq\! \int  \!\tanh^{2k} \left( \tfrac{\alpha}{2} \right) \msx(\diff{\alpha})$.}
+      \end{align*}
+    \item  The \textcolor{blue}{entropy distance}
+      \begin{align*}
+        \disth(\msx_1,\msx_2) \triangleq \sum_{k=0}^{\infty} \gamma_k \abs{M_k(\msx_1) - M_k(\msx_2)}
+      \end{align*}
+      induces a compact metric topology on $\probs$
+    \item The \textcolor{red}{duality rule} states
+      \begin{align*}
+        \ent{\msx_1} + \ent{\msx_2} &= \ent{\msx_1 \vnop \msx_2} + \ent{\msx_1 \cnop \msx_2}
+      \end{align*}
+      \begin{align*}
+        \ent{(\msx_1 - \msx_2) \vnop (\msx_3 - \msx_4) } + \ent{(\msx_1 - \msx_2) \cnop (\msx_3 - \msx_4) } = 0
+      \end{align*}
+    \end{itemize}
+    
+  \item Two probability measures $\msx_1$, $\msx_2$ are \textcolor{blue}{degraded}, $\msx_1 \degreq \msx_2$, if
+    \begin{align*}
+      \int f(|\tanh(\tfrac{\alpha}{2})|) \msx_1 (\diff{\alpha}) \geq \int f(|\tanh(\tfrac{\alpha}{2})|) \msx_2 (\diff{\alpha}) ,
+    \end{align*}
+    for all concave non-increasing functions $f$ on $[0,1]$
+    \vspace{1cm}
+  \item The variable-node and check-node operators are denoted by $\vnop$ and $\cnop$, respectively
+    \begin{itemize}
+      \vspace{0.5cm} \item Associative, commutative, linear
+      \vspace{0.5cm} \item Preserves degradation order
+    \end{itemize}
+    
+    \vspace{1cm}
+  \item The \textcolor{red}{directional derivative} of a functional $F$ is in the direction $\msy$
+    \begin{align*}
+      \deri{\msx} F(\msx)[\msy] \triangleq \lim_{\delta \rightarrow 0} \frac{F(\msx + \delta \msy ) - F(\msx)}{\delta} 
+    \end{align*}
+    
+    \vspace{1cm}
+  \item If $F$ is a linear functional, the properties of $\vnop$ and $\cnop$ allow
+    \begin{align*}
+      \deri{\msx} F(\msx^{\vnop n})[\msy] &= n F( \msx^{\vnop (n-1)} \vnop \msy ) ,
+    \end{align*}
+    similarly for $\cnop$
+
+    \vspace{1cm}
+  \item Useful properties
+    \begin{align*}
+      \ent{(\msx_1 - \msx_2) \cnop (\msx_1 - \msx_2)} = 0 \,  \text{iff $\msx_1=\msx_2$}
+    \end{align*}
+    \begin{align*}
+      \abs{\ent{(\msx_1 - \msx_2) \cnop (\msx_3 - \msx_4) }} \leq \ent{\msx_1 - \msx_2}\, \text{if $\msx_1 \degreq \msx_2$} 
+    \end{align*}
+  \end{itemize}
+\end{block}
+\end{column}
+
+% Second Column
+\begin{column}{\twocolwid}
+\begin{block}{Potential Functional for LDPC Codes}
+  \setlength\tikzheight{14.5cm}
+  \setlength\tikzwidth{19cm} 
+  \input{./Figures/potential_functional_ldpc}
+  \begin{align*}
+    \pots(\msx; \msc) &\triangleq  \tfrac{L'(1)}{R'(1)} \ent{R^{\cnop}(\msx)} + L'(1) \ent{ \rho^{\cnop}(\msx) } \\
+    & \qquad - L'(1) \ent{\msx \cnop \rho^{\cnop}(\msx)} - \ent{ \msc \vnop L^{\vnop} \left( \rho^{\cnop}(\msx) \right) } 
+  \end{align*}
+  \textcolor{jblue}{\bf Key Properties}
+  \begin{itemize}
+  \item Negative of the replica-symmetric free energy
+  \item Using duality rule
+    \begin{align*}
+      \deri{\msx} \pots( \msx ; \msc ) [\msy] &= L'(1) \mathrm{H} \Big{(} \Big{[} \underbrace{\msc \vnop \lambda^{\vnop}(\rho^{\cnop}(\msx)) - \msx}_{\alert{\text{DE update}}} \Big{]} \cnop \left[ \rho'^{\cnop}(\msx) \cnop \msy \right] \Big{)}
+    \end{align*}
+  \item A fixed point of DE is a \textcolor{blue}{stationary} point of potential
+  \item Achieves minimum only if $\msc \vnop \lambda^{\vnop}(\rho^{\cnop}(\msx)) = \msx$
+
+  \end{itemize}
+  \vspace{0.8cm}
+  \textcolor{jblue}{\bf Energy Gap}
+  \begin{itemize}
+  \item Defined by
+    \begin{align*}
+      \Delta E(\msc) = \inf_{\text{$\msx$ such that $\msx^{(\ell)}(\msx ; \msc) \not \to \cnunit$}} \pots(\msx ; \msc)
+    \end{align*}
+  \item Monotonicity: $\Delta E(\msc(\h_1)) < \Delta E(\msc(\h_2)) $ when $\h_1 > \h_2$
+  \item Correspondence to MAP threshold: $$\Delta E(\msc(\h)) > 0  \longleftrightarrow  \h < \hmap$$
+  \end{itemize}
+  
+\end{block}
+
+\vspace{0.5cm}
+\begin{block}{Spatially-Coupled DE}
+  \begin{itemize}
+  \item DE update at check-node inputs
+    \begin{align*}
+      \label{equation:scde_update_1_ldpc}
+      \msx_{i}^{(\ell+1)} = \frac{1}{w} \sum_{k=0}^{w-1} \msc_{i-k} \vnop \lambda^{\vnop} \left(  \frac{1}{w} \sum_{j=0}^{w-1} \rho^{\cnop} \left( \ms{x}_{i-k+j}^{(\ell)} \right) \right) ,
+    \end{align*}
+    where $\msc_i=\cnunit$ at the boundary and $\msc_i=\msc$ otherwise
+  \item \alert{Modified system} is a convenient upper bound on the original system.
+    It is defined by
+    \begin{align*}
+      \msx_{i}^{(\ell)} = \msx_{i_0}^{(\ell)},  \quad \text{where $i_0$ is the mid-section}
+    \end{align*}
+  \item Entropies of two systems
+    \vspace{1cm}
+    \begin{center}
+      \resizebox{18cm}{9cm}{
+        \input{./Figures/system_comparison_ldpc}
+      }
+    \end{center}
+  \item One can construct the \alert{coupled potential} $\potc$ so that fixed point of coupled DE is a stationary point
+  \end{itemize}
+\end{block}
+
+\vspace{0.5cm}
+\begin{block}{Proof Outline (Achievability)}
+  \begin{itemize}
+  \item Main idea
+    
+    \begin{itemize}
+      \vspace{0.4cm}
+    \item For the \textcolor{blue}{modified system}, when $\Delta E(\msc)>0$, assume there is a non-trivial fixed point (i.e.~$\msbx \degr \underline{\Delta_{\infty}}$)
+      \vspace{0.4cm}
+    \item Consider a small perturbation of the non-trivial fixed point
+      \begin{itemize}
+      \item Choose \textcolor{blue}{right-shift} of the vector
+      \item Show the coupled potential \alert{decreases by a constant} along this perturbation
+      \end{itemize}
+      \vspace{0.3cm}
+    \item Make all the variations in the potential up to second-order \textcolor{blue}{arbitrarily small} by choosing a \alert{large $w$}
+      \vspace{0.3cm}
+    \item These two observations \alert{contradict} each other
+    \end{itemize}
+    
+    \vspace{0.4cm}
+  \item Right-shift operator: $\shft(\msbx)_{i}=\msx_{i-1}$ with $\msx_0=\cnunit$  
+    \begin{itemize}
+    \item A right-shift strictly reduces the modified system potential by
+      \begin{align*}
+        \potc(\shft(\msbx);\msc) - \potc(\msbx ; \msc) \leq -\pots(\msx_{i_0} ; \msc) \leq - \Delta E(\msc)
+      \end{align*}
+
+    \item At a fixed point, no first-order variation of the modified system potential in the direction $\shft(\msbx) - \msbx$
+      \begin{align*}
+        \deri{\msbx} \potc( \msbx ; \msc)[\shft(\msbx) - \msbx] = 0
+      \end{align*}
+
+    \item Second-order variation can be made arbitrarily small by choosing a large $w$
+      \begin{align*}
+        \abs{ \dderi{\msbx} \potc(\msbx ; \msc)[\shft(\msbx) - \msbx,\shft(\msbx) - \msbx] } \leq \frac{K_{\lambda,\rho}}{w}
+      \end{align*}
+    \end{itemize}
+
+    \vspace{0.4cm}
+  \item Consolidate these observations
+    \begin{itemize}
+    \item Consider a \textcolor{blue}{parameterized function} $\phi(\cdot)$
+      \begin{align*}
+        \phi(t)=\potc(\msbx + t (\shft(\msbx) - \msbx) ; \msc)
+      \end{align*}
+    \item We have $\phi(1)-\phi(0) = \potc(\shft(\msbx) ; \msc) - \potc(\msbx ; \msc)$
+      \vspace{0.25cm}
+    \item Derivatives of $\phi(\cdot)$ are related to directional derivatives of $\potc$
+      \begin{align*}
+        \phi'(t) &= \deri{\msbx + t (\shft(\msbx) - \msbx)} \potc( \msbx + t (\shft(\msbx) - \msbx) ; \msc)[\shft(\msbx) - \msbx] 
+      \end{align*}
+    \item Finish by taking a \textcolor{red}{second-order Taylor's expansion} of $\phi(\cdot)$
+    \end{itemize}
+  \end{itemize}
+\end{block}
+\end{column}
+
+% Third Column
+\begin{column}{\threecolwid}
+\begin{block}{Proof Outline (Converse)}
+  \begin{itemize}
+  \vspace{0.3cm}\item When $\Delta E(\msc) < 0$, the minimum of the potential functional is \textcolor{blue}{negative} and is achieved at DE \textcolor{blue}{fixed point} $\msx_*$
+  \vspace{0.3cm}\item Initialize the coupled system with $\msbx_*=[\msx_*,\cdots,\msx_*]$
+  \vspace{0.3cm}\item Choosing large $N$ for a fixed $w$, can make $\potc(\msbx_*;\msc)<0$
+  \vspace{0.3cm}\item Show that the coupled potential decreases with iteration
+  \vspace{0.3cm}\item Thus, $\potc(\msbx^{(\infty)} ; \msc) < 0$ with $\msbx^{(0)}=\msbx_*$ and therefore $\msbx^{(\infty)} \degr \underline{\cnunit}$
+  \item By monotonicity, $\msbx^{(\infty)} \degr \underline{\cnunit}$ with $\msbx^{(0)}=\underline{\vnunit}$
+  \end{itemize}
+\end{block}
+
+\vspace{1cm}
+\begin{block}{Analysis of LDGM Codes}
+
+\setlength\tikzheight{14.5cm}
+\setlength\tikzwidth{19cm}
+\input{./Figures/potential_functional_ldgm}
+
+\textcolor{jblue}{\bf Potential Functional}
+
+\begin{itemize}
+\item Same key properties
+\item However, main issue is that $\cnunit$ is not a fixed point of DE or a stationary point of potential
+\item Energy gap \alert{may not} be monotonic (difficulty in defining thresholds)
+\end{itemize}
+
+\textcolor{jblue}{\bf Proof Strategy}
+\begin{itemize}
+\item For BEC, the DE update is given by 
+  \begin{align*}
+    x^{(\ell+1)} = \lambda(1-(1-\epsilon) \rho(1-x^{(\ell)})),
+  \end{align*}
+   with \textcolor{blue}{minimal fixed point} $x_0$ starting from 0
+\item \alert{Shifted recursion}:
+  \begin{align*}
+      x^{(\ell+1)} = \lambda(1-(1-\epsilon) \rho(1-(x^{(\ell)}+x_0))) - x_0 ,
+  \end{align*}
+  has \textcolor{blue}{$0$ as the fixed point}
+\item One can analyze the coupled system of the shifted recursion and transfer the result back to the original recursion
+\item For the SC system, this transformation is equivalent to changing the boundary to $x_0$
+\item Changing the boundary to the minimal fixed point is effective for BMS channels
+\item Tweak the coupled potential to reflect the boundary and show that it has the desired properties
+\end{itemize}
+
+\end{block}
+
+\begin{block}{Conclusion}
+  \begin{itemize}
+  \item Proved \textcolor{blue}{threshold saturation} for irregular LDPC and LDGM codes on BMS channels
+    \vspace{0.5cm}
+  \item Simple proof based on \textcolor{blue}{potential functions}
+    \vspace{0.5cm}
+  \item Can be expanded to other Graphical models
+    \begin{itemize}
+    \item Can handle \alert{non-trivial fixed points}
+    \end{itemize}
+  \item Interesting to see if one can analyze SC LDGM codes with belief propagation guided decimation for lossy source compression 
+  \end{itemize}
+\end{block}
+
+% Bibliography
+\begin{block}{References}
+
+\begin{thebibliography}{10}
+\bibitem{Felstrom-it99}
+  J.~Felstrom and K.~S. Zigangirov, ``Time-varying periodic convolutional codes
+  with low-density parity-check matrix,'' \emph{IEEE Trans.\ Inform.\ Theory},
+  vol.~45, no.~6, pp. 2181--2191, 1999.
+  
+\bibitem{Lentmaier-it10}
+M.~Lentmaier, A.~Sridharan, D.~J. Costello, and K.~S. Zigangirov, ``Iterative
+  decoding threshold analysis for {LDPC} convolutional codes,'' \emph{IEEE
+  Trans.\ Inform.\ Theory}, vol.~56, no.~10, pp. 5274--5289, Oct. 2010.
+
+\bibitem{Kudekar-it11}
+S.~Kudekar, T.~J. Richardson, and R.~L. Urbanke, ``Threshold saturation via
+  spatial coupling: {W}hy convolutional {LDPC} ensembles perform so well over
+  the {BEC},'' \emph{IEEE Trans.\ Inform.\ Theory}, vol.~57, no.~2, pp.
+  803--834, 2011.
+
+\bibitem{Kudekar-arxiv12}
+S.~Kudekar, T.~Richardson, and R.~Urbanke, ``Spatially coupled ensembles
+  universally achieve capacity under belief propagation,'' 2012, arxiv preprint,
+  arXiv:1201.2999.
+
+\bibitem{Yedla-istc12}
+A.~Yedla, Y.-Y. Jian, P.~S. Nguyen, and H.~D. Pfister, ``A simple proof of
+  threshold saturation for coupled scalar recursions,'' in \emph{Proc.\ Int.\
+  Symp.\ on Turbo Codes \& Iterative Inform.\ Proc.}, 2012, pp. 51--55, arxiv
+  preprint arXiv:1204.5703, 2012.
+
+\bibitem{Montanari-it05}
+A.~Montanari, ``Tight bounds for {LDPC} and {LDGM} codes under {MAP}
+  decoding,'' \emph{IEEE Trans.\ Inform.\ Theory}, vol.~51, no.~9, pp.
+  3221--3246, 2005.
+
+\end{thebibliography}
+
+\end{block}
+
+\end{column}
+\end{columns}
+\end{document}

@@ -1,0 +1,69 @@
+\begin{tikzpicture}
+  [
+  node distance = 12mm, draw=black, thick, >=stealth',
+  bitnode/.style={circle, inner sep = 0pt, minimum size = 4mm, draw=black},
+  bitnode2/.style={circle, inner sep = 0pt, minimum size = 4mm, draw=black, fill=gray},
+  checknode/.style={rectangle, inner sep = 0pt, minimum size = 4mm, draw=black},
+  ]
+
+  \draw[<->] (3,0.5) -- node[midway,fill=white]{\tiny{$N$}} (6,0.5);
+  \draw[<->] (1,0.5) -- node[midway,fill=white]{\tiny{$w$}} (3,0.5);
+
+  \foreach \x in {1,2} {
+    \node[bitnode2] (bu\x) at (\x,0) {};
+  }
+
+  \foreach \x in {3,4,...,6} {
+    \node[bitnode] (bu\x) at (\x,0) {};
+  }
+
+  \foreach \x in {7,8} {
+    \node[bitnode2] (bu\x) at (\x,0) {};
+  }
+  
+  \foreach \x in {1,2,...,6} {
+    \node[checknode] (c\x) at (\x+2,-2) {};
+  }
+
+  \foreach \x in {1,2} {
+    \node[bitnode2] (bd\x) at (\x,-4) {};
+  }
+
+  \foreach \x in {3,4,...,6} {
+    \node[bitnode] (bd\x) at (\x,-4) {};
+  }
+
+  \foreach \x in {7,8} {
+    \node[bitnode2] (bd\x) at (\x,-4) {};
+  }
+
+  \draw[dashed] (bu1) -- (c1); \draw[dashed] (bd1) -- (c1);
+  \draw[dashed] (bu2) -- (c1); \draw[dashed] (bd2) -- (c1);
+  \draw[] (bu3) -- (c1); \draw[] (bd3) -- (c1);
+
+  \draw[dashed] (bu2) -- (c2); \draw[dashed] (bd2) -- (c2);
+  \draw[] (bu3) -- (c2); \draw[] (bd3) -- (c2);
+  \draw[] (bu4) -- (c2); \draw[] (bd4) -- (c2);
+
+  \draw[] (bu3) -- (c3); \draw[] (bd3) -- (c3);
+  \draw[] (bu4) -- (c3); \draw[] (bd4) -- (c3);
+  \draw[] (bu5) -- (c3); \draw[] (bd5) -- (c3);
+
+  \draw[] (bu4) -- (c4); \draw[] (bd4) -- (c4);
+  \draw[] (bu5) -- (c4); \draw[] (bd5) -- (c4);
+  \draw[] (bu6) -- (c4); \draw[] (bd6) -- (c4);
+
+  \draw[] (bu5) -- (c5); \draw[] (bd5) -- (c5);
+  \draw[] (bu6) -- (c5); \draw[] (bd6) -- (c5);
+  \draw[dashed] (bu7) -- (c5); \draw[dashed] (bd7) -- (c5);
+
+  \draw[] (bu6) -- (c6); \draw[] (bd6) -- (c6);
+  \draw[dashed] (bu7) -- (c6); \draw[dashed] (bd7) -- (c6);
+  \draw[dashed] (bu8) -- (c6); \draw[dashed] (bd8) -- (c6);
+
+\end{tikzpicture}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "../poster"
+%%% End: 
