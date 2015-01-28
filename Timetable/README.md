@@ -2,6 +2,7 @@ Doctoral Degree Requirements
 ----------------------------
 
 The [Office of Graduate and Professional Studies](http://ogs.tamu.edu/) provides a description of the doctoral degree requirements at [Texas A&M University](http://www.tamu.edu/).
+In addition, the [Department of Electrical and Computer Engieering](http://engineering.tamu.edu/electrical) has its own requirements.
 
 ### Graduate Student
 * Take departmental Ph.D. [Qualifying Exam](http://engineering.tamu.edu/electrical/academics/advising/graduate/phd-qualifying-exams) within first year.
@@ -10,12 +11,12 @@ The [Office of Graduate and Professional Studies](http://ogs.tamu.edu/) provides
 * Complete coursework detailed on degree plan before preliminary exam.
 
 ### Preliminary Examination
-* Take preliminary examination; results must be received by the [Office of Graduate and Professional Studies](http://ogs.tamu.edu/) at least __14 weeks__ prior to the final examination date.
+* Take preliminary examination; results must be received by the [Office of Graduate and Professional Studies](http://ogs.tamu.edu/) at least __14 weeks__ prior to final examination date.
 
 ### Final Examination
 * Apply for a degree through [Howdy](https://howdy.tamu.edu) during first week of final semester; pay graduation fee.
 * Submit _Proposal for Dissertation or Record of Study_ at least __20 working days__ prior to the submission of _Request and Announcement of Final Examination_.
-* Submit _Request and Announcement of the Final Examination_ at least __10 working days__ prior to the examination to the [Office of Graduate and Professional Studies](http://ogs.tamu.edu/).
+* Submit _Request and Announcement of the Final Examination_ to the [Office of Graduate and Professional Studies](http://ogs.tamu.edu/) at least __10 working days__ prior to final examination .
 * __Final Examination!__
 * Upload approved PDF file of dissertation and submit signed approval page to the [Thesis Office](http://ogs.tamu.edu/current-students/thesis-dissertation/).
 
