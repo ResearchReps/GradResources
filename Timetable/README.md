@@ -9,14 +9,14 @@ The [Office of Graduate and Professional Studies](http://ogs.tamu.edu/) provides
 * Submit degree plan [online](https://ogsdpss.tamu.edu/); degree plan must be approved at least __90 days__ prior to the preliminary exam.
 * Complete coursework detailed on degree plan before preliminary exam.
 
-### PhD Candidate
+### Preliminary Examination
 * Take preliminary examination; results must be received by the [Office of Graduate and Professional Studies](http://ogs.tamu.edu/) at least __14 weeks__ prior to the final examination date.
 
-### Final Defense
+### Final Examination
 * Apply for a degree through [Howdy](https://howdy.tamu.edu) during first week of final semester; pay graduation fee.
 * Submit _Proposal for Dissertation or Record of Study_ at least __20 working days__ prior to the submission of _Request and Announcement of Final Examination_.
-* Submit _Request and Announcement of the Final Examination_ at least __10 working days__ prior to the examination to the Office of Graduate and Professional Studies.
+* Submit _Request and Announcement of the Final Examination_ at least __10 working days__ prior to the examination to the [Office of Graduate and Professional Studies]((http://ogs.tamu.edu/).
 * __Final Examination!__
-* Upload approved PDF file of dissertation and submit signed approval page to [Thesis Office](http://ogs.tamu.edu/current-students/thesis-dissertation/).
+* Upload approved PDF file of dissertation and submit signed approval page to the [Thesis Office](http://ogs.tamu.edu/current-students/thesis-dissertation/).
 
 
