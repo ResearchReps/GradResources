@@ -2,7 +2,7 @@ Doctoral Degree Requirements
 ----------------------------
 
 The [Office of Graduate and Professional Studies](http://ogs.tamu.edu/) provides a description of the doctoral degree requirements at [Texas A&M University](http://www.tamu.edu/).
-In addition, the [Department of Electrical and Computer Engieering](http://engineering.tamu.edu/electrical) has its own requirements.
+In addition, the [Department of Electrical and Computer Engineering](http://engineering.tamu.edu/electrical) has its own requirements.
 
 ### Graduate Student
 * Take departmental Ph.D. [Qualifying Exam](http://engineering.tamu.edu/electrical/academics/advising/graduate/phd-qualifying-exams) within first year.
