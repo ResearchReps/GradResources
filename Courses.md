@@ -35,3 +35,13 @@ The list below contains a subset of interesting courses relevant to researchers 
 * MATH 654 – Algebra II
 * MATH 664 – Compressive Sensing
 
+
+## Statistics
+
+* STAT 601 – Statistical Analysis
+* STAT 610 – Theory of Statistics I
+* STAT 611 – Theory of Statistics II
+* STAT 630 – Overview of Mathematical Statistics
+* STAT 641 – The Methods of Statistics I
+* STAT 642 – The Methods of Statistics II
+
