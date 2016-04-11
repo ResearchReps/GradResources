@@ -8,9 +8,16 @@ The list below contains a subset of interesting courses relevant to researchers 
 ## Electrical and Computer Engineering
 
 * ECEN 601 – Linear Network Analysis
+* ECEN 602 – Computer Communications and Networking
 * ECEN 604 – Channel Coding for Communications
+* ECEN 605 – Linear Control Systems
 * ECEN 629 – Convex Optimization for Electrical Engineering
 * ECEN 646 – Statistical Communication Theory
 * ECEN 647 – Information Theory
+* ECEN 649 – Pattern Recognition
 * ECEN 655 – Advanced Channel Coding
 * ECEN 662 – Estimation and Detection Theory
+* ECEN 750 – Design and Analysis of Communication Networks
+* ECEN 755 – Stochastic Systems
+* ECEN 760 – Introduction to Probabilistic Graphical Models
+
