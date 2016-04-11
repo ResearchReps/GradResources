@@ -22,6 +22,16 @@ The list below contains a subset of interesting courses relevant to researchers 
 * ECEN 760 – Introduction to Probabilistic Graphical Models
 
 
+## Computer Science and Computer Engineering
+
+* CSCE 627 – Theory of Computability
+* CSCE 629 – Analysis of Algorithms
+* CSCE 633 – Machine Learning
+* CSCE 636 – Neural Networks
+* CSCE 658 – Randomized Algorithms
+* CSCE 666 – Pattern Analysis
+
+
 ## Mathematics
 
 * MATH 446 – Principles of Analysis I
