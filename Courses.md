@@ -21,3 +21,17 @@ The list below contains a subset of interesting courses relevant to researchers 
 * ECEN 755 – Stochastic Systems
 * ECEN 760 – Introduction to Probabilistic Graphical Models
 
+
+## Mathematics
+
+* MATH 446 – Principles of Analysis I
+* MATH 447 – Principles of Analysis II
+* MATH 606 – Theory of Probability I
+* MATH 607 – Real Variables I
+* MATH 608 – Real Variables II
+* MATH 619 – Applied Probability
+* MATH 630 – Combinatorics
+* MATH 653 – Algebra I
+* MATH 654 – Algebra II
+* MATH 664 – Compressive Sensing
+
